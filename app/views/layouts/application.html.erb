@@ -1,35 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>WdiProject2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<header>
-  <nav>
-    <ul>
-      <% if user_signed_in? %>
-        <li><%= link_to "All Posts", posts_path %></li>
-        <li><%= link_to "Add Post", new_post_path %></li>
-        <li><%= current_user.email %></li>
-        <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-        <li><%= link_to "Register", new_user_registration_path %></li>
-      <% end %>
-    </ul>
-  </nav>
-</header>
-<% flash.each do |name, message| %>
-  <div class="flash-message flash-message-<%= name %>">
-    <%= message %>
-  </div>
-<% end %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= render "header" %>
+    <%= render "flash_messages" %>
+    <%= yield %>
+
+  </body>
 </html>
