@@ -1,19 +1,40 @@
 <header>
-  <nav>
-    <ul>
-      <% if user_signed_in? %>
-        <li><%= link_to "Festivals", festivals_path %></li>
-        <li><%= link_to "Country", location_path %></li>
-        <li><%= link_to "Music", genre_path %></li>
-        <li><%= link_to "Month", festival_date_path %></li>
-        <li><%= link_to "Add Festival", new_festival_path %></li>
-        <li><%= current_user.email %></li>
-        <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-        <li><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-        <li><%= link_to "Register", new_user_registration_path %></li>
-      <% end %>
-    </ul>
-  </nav>
+ <nav class="top-bar" data-topbar role="navigation">
+   <ul class="title-area">
+     <li class="name">
+       <h1><a href="/">My Site</a></h1>
+     </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+   </ul>
+
+   <section class="top-bar-section">
+     <!-- Right Nav Section -->
+     <ul class="right">
+       <% if user_signed_in? %>
+       <li><%= link_to "Festivals", festivals_path %></li>
+       <li><%= link_to "Country", location_path %></li>
+       <li><%= link_to "Music", genre_path %></li>
+       <li><%= link_to "Month", festival_date_path %></li>
+       <li class="has-dropdown">
+         <a href="#">My Profile</a>
+         <ul class="dropdown">
+           <li><%= link_to "My Favourites", favourites_path %></li>
+           <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+           <li class="active"><%= link_to "Log out", destroy_user_session_path, method: :delete  %></li>
+         </ul>
+       </li>
+       <% else %>
+       <li><%= link_to "Sign in", new_user_session_path %></li>
+       <li><%= link_to "Register", new_user_registration_path %></li>
+       <% end %>
+     </ul>
+
+     <!-- Left Nav Section -->
+     <ul class="left">
+       <li><%= link_to "Add Festival", new_festival_path %></li>
+     </ul>
+   </section>
+ </nav>
 </header>
+
