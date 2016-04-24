@@ -3,13 +3,8 @@ class FavouritesController < ApplicationController
     @favourites = Favourite.all
   end
 
-  def new
-  end
-
   def show
-  end
-
-  def create
+    @favourite = Favourite.find(params[:id])
   end
 
   def edit

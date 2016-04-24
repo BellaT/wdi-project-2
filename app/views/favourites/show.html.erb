@@ -1,2 +1,6 @@
-<h1>Favourites#show</h1>
-<p>Find me in app/views/favourites/show.html.erb</p>
+<h1><%= @favourite %></h1>
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+    <%= render @favourite.users %>
+  </div>
+</div>
