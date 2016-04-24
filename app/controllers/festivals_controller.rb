@@ -21,4 +21,9 @@ class FestivalsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def festival_params
+      params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation)
+    end
 end

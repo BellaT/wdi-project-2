@@ -3,6 +3,9 @@
     <ul>
       <% if user_signed_in? %>
         <li><%= link_to "Festivals", festivals_path %></li>
+        <li><%= link_to "Country", location_path %></li>
+        <li><%= link_to "Music", genre_path %></li>
+        <li><%= link_to "Month", festival_date_path %></li>
         <li><%= link_to "Add Festival", new_festival_path %></li>
         <li><%= current_user.email %></li>
         <li><%= link_to "Edit Account", edit_user_registration_path %></li>
