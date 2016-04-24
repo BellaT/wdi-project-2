@@ -25,6 +25,6 @@ class FestivalsController < ApplicationController
 
   private
     def festival_params
-      params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation)
+      params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation, :website)
     end
 end
