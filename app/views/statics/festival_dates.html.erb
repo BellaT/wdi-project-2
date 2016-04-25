@@ -1,4 +1,14 @@
+<div class="row" data-equalizer>
+
 <% @months.each do |month| %>
-  <li><%= link_to month, month_path(month) %></li>
+
+  <div class="medium-4 medium-offset-2 columns" style="background-image: url(<%= @festivals.sample.image %>);" data-equalizer-watch>
+    <h2><%= link_to month, month_path(month) %></h2>
+  </div>
+
 <% end %>
 
+</div>
+
+  
+  

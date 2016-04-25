@@ -11,6 +11,7 @@ class StaticsController < ApplicationController
   end
 
   def festival_dates
+    @festivals = Festival.all
     @months = Date::MONTHNAMES.slice(1,12)
   end
 end

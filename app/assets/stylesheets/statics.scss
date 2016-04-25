@@ -4,9 +4,9 @@
 .medium-4.columns {
   height: 300px;
   width: 300px;
-  background-size: 300px 300px;
-  background-image: 100%;
+  background-size: cover;
   background-repeat: no-repeat; 
+  background-position: center;
   border-radius: 5%;
   margin-bottom: 10px; 
 }
