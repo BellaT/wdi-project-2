@@ -1,0 +1,9 @@
+<h1>Music</h1>
+
+<% if @genres %>
+  <% @genres.each do |genre| %>
+    <p><%= link_to genre, genre_path(genre) %></p>
+  <% end %>
+<% else %>
+  <p>THEY ARE NOT.</p>
+<% end %>

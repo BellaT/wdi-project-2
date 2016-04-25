@@ -1,0 +1,9 @@
+<h1>Countries</h1>
+
+<% if @locations %>
+  <% @locations.each do |location| %>
+    <p><%= link_to location, location_path(location) %></p>
+  <% end %>
+<% else %>
+  <p>THEY ARE NOT.</p>
+<% end %>

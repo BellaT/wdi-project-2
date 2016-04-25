@@ -4,8 +4,13 @@ Rails.application.routes.draw do
   resources :users
   resources :festivals
   resources :favourites
-  get "/location", to: "festivals#location"
-  get "/genre", to: "festivals#genre"
-  get "/festival_date", to: "festivals#festival_date"
+  get "/locations", to: "statics#locations"
+  get "/locations/:location", to: "festivals#location", as: :location
+
+  get "/festival_dates", to: "statics#festival_dates"
+  get "/festival_dates/:festival_date", to: "festivals#festival_date", as: :festival_date
+
+  get "/genres", to: "statics#genres"
+  get "/genres/:genre", to: "festivals#genre", as: :genre
 
 end

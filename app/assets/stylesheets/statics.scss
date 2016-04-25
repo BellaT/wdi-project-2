@@ -1,3 +1,16 @@
 // Place all the styles related to the statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.medium-4.columns {
+  height: 300px;
+  width: 300px;
+  background-size: 300px 300px;
+  background-image: 100%;
+  background-repeat: no-repeat; 
+  border-radius: 5%;
+  margin-bottom: 10px; 
+}
+
+h2 {
+  // color: white;
+}
