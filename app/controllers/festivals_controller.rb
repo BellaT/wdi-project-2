@@ -38,6 +38,11 @@ class FestivalsController < ApplicationController
     render :"festivals/index"
   end
 
+  def month
+    @festivals = Festival.search_by_month(params[:month])
+    render :"festivals/index"
+  end
+
   private
     def festival_params
       params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation, :website)

@@ -11,8 +11,6 @@ class StaticsController < ApplicationController
   end
 
   def festival_dates
-    # @festival_dates = Festival.all.map(&:festival_date).uniq
-    @festivals = Festival.all
-    @festival_months = @festivals.group_by { |festival| festival.festival_date.beginning_of_month }
+    @months = Date::MONTHNAMES.slice(1,12)
   end
 end

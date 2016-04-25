@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/locations/:location", to: "festivals#location", as: :location
 
   get "/festival_dates", to: "statics#festival_dates"
-  get "/festival_dates/:festival_date", to: "festivals#festival_date", as: :festival_date
+  get "/festival_dates/:month", to: "festivals#month", as: :month
 
   get "/genres", to: "statics#genres"
   get "/genres/:genre", to: "festivals#genre", as: :genre
