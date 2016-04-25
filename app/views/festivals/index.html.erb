@@ -1,6 +1,11 @@
-<h1>All Festivals</h1>
+<%= render @festivals %>
 <% @festivals.in_groups_of(2) do |group| %>
 <div class="row" data-equalizer>
-<%= render @festivals %>
+  <div class="medium-4 medium-offset-1 square columns" style="background-image: url(<%= group.first.image %>);" data-equalizer-watch>
+    <h2><%= link_to group.first.title, festival_path(group.first.id) %></h2>
+  </div>
+  <div class="medium-4 medium-offset-1 square columns" style="background-image: url(<%= group.last.image %>);" data-equalizer-watch>
+    <h2><%= link_to group.last.title, festival_path(group.last.id) %></h2>
+  </div>
 </div>
 <% end %>
