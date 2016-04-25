@@ -1,4 +1,6 @@
 class FestivalsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @festivals = Festival.all
   end

@@ -1,6 +1,8 @@
-<h1><%= @festival.title %></h1>
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-    <%= render @festival %>
+<div class="card">
+  <%= image_tag festival.image, class: "card-img-top" %>
+  <div class="card-block">
+    <h4 class="card-title"><%= festival.title %></h4>
+    <p class="card-text"><%= festival.description %></p>
+    <p class="card-text"><small class="text-muted">Listed <%= distance_of_time_in_words(Time.now, festival.created_at) %> ago</small></p>
   </div>
 </div>

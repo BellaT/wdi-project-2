@@ -4,15 +4,19 @@ class UsersController < ApplicationController
   end
 
   def show
+    authenticate_user!
     @user = User.find(params[:id])
   end
 
   def edit
+    authenticate_user!
   end
 
   def update
+    authenticate_user!
   end
 
   def delete
+    authenticate_user!
   end
 end

@@ -1,3 +1,6 @@
 <h1>All Festivals</h1>
-
+<% @festivals.in_groups_of(2) do |group| %>
+<div class="row" data-equalizer>
 <%= render @festivals %>
+</div>
+<% end %>
