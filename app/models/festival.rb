@@ -5,4 +5,5 @@ class Festival < ActiveRecord::Base
   mount_uploader :main_image, FestivalImageUploader
   mount_uploader :second_image, FestivalImageUploader
   mount_uploader :third_image, FestivalImageUploader
+
 end

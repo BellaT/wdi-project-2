@@ -1,9 +1,11 @@
-<h1>Music</h1>
+<div class="row" data-equalizer>
 
-<% if @genres %>
-  <% @genres.each do |genre| %>
-    <p><%= link_to genre, genre_path(genre) %></p>
-  <% end %>
-<% else %>
-  <p>THEY ARE NOT.</p>
+<% @genres.each do |genre| %>
+
+  <div class="medium-4 medium-offset-2 square columns" style="background-image: url(<%= @festivals.sample.main_image.url %>);" data-equalizer-watch>
+    <h2><%= link_to genre, genre_path(genre) %></h2>
+  </div>
+
 <% end %>
+
+</div>

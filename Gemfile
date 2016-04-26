@@ -4,6 +4,7 @@ ruby "2.2.3"
 gem 'devise'
 gem 'foundation-rails', '~> 5.5.3'
 gem 'carrierwave', '0.10.0'
+gem 'acts_as_votable', '~> 0.10.0'
 
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'

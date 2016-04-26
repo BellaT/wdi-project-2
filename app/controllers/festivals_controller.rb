@@ -1,5 +1,6 @@
 class FestivalsController < ApplicationController
   before_action :authenticate_user!
+  before_action :get_genres_and_locations
   
   def index
     @festivals = Festival.all
@@ -58,5 +59,10 @@ class FestivalsController < ApplicationController
   private
     def festival_params
       params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation, :website)
+    end
+
+    def get_genres_and_locations
+      @genres = Festival.all.map(&:genre).uniq
+      @locations = Festival.all.map(&:location).uniq
     end
 end
