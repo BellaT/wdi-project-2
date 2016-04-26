@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     authenticate_user!
     @user = User.find(params[:id])
+    @favourites = @user.find_liked_items
   end
 
   def edit

@@ -1,9 +1,11 @@
-<h1>Countries</h1>
+<div class="row" data-equalizer>
 
-<% if @locations %>
-  <% @locations.each do |location| %>
-    <p><%= link_to location, location_path(location) %></p>
-  <% end %>
-<% else %>
-  <p>THEY ARE NOT.</p>
+<% @locations.each do |location| %>
+
+  <div class="medium-4 medium-offset-2 square columns" style="background-image: url(<%= @festivals.sample.main_image.url %>);" data-equalizer-watch>
+    <h2><%= link_to location, location_path(location) %></h2>
+  </div>
+
 <% end %>
+
+</div>

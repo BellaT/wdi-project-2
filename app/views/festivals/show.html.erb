@@ -7,6 +7,11 @@
   <dd><%= @festival.festival_date %></dd>
   <dd><%= link_to "Tickets", @festival.tickets %></dd>
   <dd><%= link_to "Website", @festival.website %></dd>
+  <% if !current_user.voted_up_on? @festival %>
+  <dd><%= link_to "Favourite", like_festival_path(@festival.id), method: :post %></dd>
+  <% else %>
+  <dd><%= link_to "Unfavourite", dislike_festival_path(@festival.id), method: :delete %></dd>
+  <% end %>
 </dl>
 <div class="row">
   <h3>Info</h3>

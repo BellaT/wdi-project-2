@@ -1,20 +1,15 @@
 class FavouritesController < ApplicationController
   before_action :authenticate_user!
-  
-  def index
-    @favourites = Favourite.all
+
+  def upvote
+    @festival = Festival.find(params[:id])
+    @festival.liked_by current_user
+    redirect_to @festival
   end
 
-  def show
-    @favourite = Favourite.find(params[:id])
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
+  def downvote
+    @festival = Festival.find(params[:id])
+    @festival.downvote_from current_user
+    redirect_to @festival
   end
 end

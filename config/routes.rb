@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :festivals
-  resources :favourites
   get "/locations", to: "statics#locations"
   get "/locations/:location", to: "festivals#location", as: :location
 
@@ -12,5 +11,8 @@ Rails.application.routes.draw do
 
   get "/genres", to: "statics#genres"
   get "/genres/:genre", to: "festivals#genre", as: :genre
+
+  post "/favourites/:id", to: "favourites#upvote", as: :like_festival
+  delete "/favourites/:id", to: "favourites#downvote", as: :dislike_festival
 
 end

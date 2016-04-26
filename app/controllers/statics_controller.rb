@@ -5,11 +5,13 @@ class StaticsController < ApplicationController
   end
 
   def genres
-    @genres = Festival.all.map(&:genre).uniq
+    @festivals = Festival.all
+    @genres = @festivals.map(&:genre).uniq
   end
 
   def locations
-    @locations = Festival.all.map(&:location).uniq
+    @festivals = Festival.all
+    @locations = @festivals.map(&:location).uniq
   end
 
   def festival_dates
