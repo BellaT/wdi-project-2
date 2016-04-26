@@ -6,7 +6,7 @@ class FestivalsController < ApplicationController
   end
 
   def new
-    @festivals = Festival.new
+    @festival = Festival.new
   end
 
   def show
@@ -14,6 +14,16 @@ class FestivalsController < ApplicationController
   end
 
   def create
+    @festival = Festival.new(festival_params)
+    respond_to do |format|
+      if @festival.save
+        format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
+        format.json { render :show, status: :created, location: @festival }
+      else
+        format.html { render :new }
+        format.json { render json: @festival.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def edit

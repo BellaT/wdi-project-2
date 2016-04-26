@@ -1,2 +1,113 @@
-<h1>Festivals#new</h1>
-<p>Find me in app/views/festivals/new.html.erb</p>
+<!-- <form>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Festival Name
+        <input type="text" placeholder="Festival name" />
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Input Label
+        <input type="text" placeholder="large-4.columns" />
+      </label>
+    </div>
+    <div class="large-4 columns">
+      <label>Input Label
+        <input type="text" placeholder="large-4.columns" />
+      </label>
+    </div>
+    <div class="large-4 columns">
+      <div class="row collapse">
+        <label>Input Label</label>
+        <div class="small-9 columns">
+          <input type="text" placeholder="small-9.columns" />
+        </div>
+        <div class="small-3 columns">
+          <span class="postfix">.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Select Box
+        <select>
+          <option value="husker">Husker</option>
+          <option value="starbuck">Starbuck</option>
+          <option value="hotdog">Hot Dog</option>
+          <option value="apollo">Apollo</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <label>Choose Your Favorite</label>
+      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+    </div>
+    <div class="large-6 columns">
+      <label>Check these out</label>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Description
+        <textarea placeholder="Description"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Travel
+        <textarea placeholder="How to get there"></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Accommodation
+        <textarea placeholder="Accommodation"></textarea>
+      </label>
+    </div>
+  </div>
+</form>
+ -->
+
+ <%= form_for @festival do |f| %>
+  <%= f.label :festival_name %>
+  <%= f.text_field :title %>
+  <%= f.label :festival_date %>
+  <%= f.date_field :festival_date %>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <%= f.label :country %>
+  <%= f.text_field :location %>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+  <%= f.label :website %>
+  <%= f.text_field :website %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.submit "Create" %>
+ <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,7 +18,9 @@ u2 = User.create!(username: "alexchin",
 
 f1 = Festival.create!(title: "Sonar Festival",
                       location: "Spain",
-                      festival_date: DateTime.new(2016, 9, 14),
+                      city: "Barcelona",
+                      festival_date: DateTime.new(2016, 6, 17),
+                      month: "June",
                       genre: "Techno",
                       tickets: "https://sonar.es/en/pg/tickets",
                       comments: "user's comments",
@@ -27,10 +29,14 @@ f1 = Festival.create!(title: "Sonar Festival",
                       transport: "Metro (www.tmb.cat): Line L9 -> Take L9 from the Airport, change at Torrassa. Take L1 in the direction of Fondo, to Espanya.  Aerobús: Line A1 -> Direct from T1 to Plaça Espanya: from 5:35am a 01:05am. Price each way: 5,90€ (single) and 10,20€ (return) – valid 15 days. Max. 10 minute-wait. Line A2 -> Direct from T2 (T2A, T2B and T2C) to Plaça Espanya: from 6am to 1am. Price each way: 5,90€ (single) and 10,20€ (return) – valid 15 days. Max. 10 minute-wait.  Autobús 46: Direct from the Airport (T1 and T2) to Plaça Espanya: from 5am to 00:45am. Max. 15 minute-wait. Price each way: 2,15€",
                       accommodation: "https://sonar.findor.com/results/list?packageType=H&room1=2&room1Key=14401-OMH-M-20151216-20151226-NIL-NIL-L-NIL-NREFRO_12569121_763854521_NIL_2_0_NIL_471.86_USD&checkIn=2016-06-15&checkOut=2016-06-19&lang=en&currency=USD",
                       website: "https://sonar.es/en/2016/")
+f1.image = Rails.root.join("sdasdadfasd.png").open
+f1.save!
 
 f2 = Festival.create!(title: "Glastonbury Festival",
                       location: "England",
-                      festival_date: DateTime.new(2016, 1, 15),
+                      city: "Glastonbury"
+                      festival_date: DateTime.new(2016, 6, 24),
+                      month: "June",
                       genre: "Contempory",
                       tickets: "http://www.glastonburyfestivals.co.uk/information/tickets/",
                       comments: "user's comments",
