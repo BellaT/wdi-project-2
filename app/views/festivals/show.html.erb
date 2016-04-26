@@ -1,15 +1,27 @@
-<div class="card">
-  <%= image_tag festival.image, class: "card-img-top" %>
-  <div class="card-block">
-    <h4 class="card-title"><%= festival.title %></h4>
-    <p class="card-text"><%= festival.description %></p>
-    <p class="card-text"><small class="text-muted">Listed <%= distance_of_time_in_words(Time.now, festival.created_at) %> ago</small></p>
-  </div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="<%= @festival.main_image.url %>">
+   <h2><%= @festival.title %></h2>
 </div>
-
-
-
-<p>
- <b>Image:</b>
- <%= image_tag @festival.image.url %>
-</p>
+<dl class="sub-nav row">
+  <dt></dt>
+  <dd><%= @festival.city %>, <%= @festival.location %></dd>
+  <dd><%= @festival.festival_date %></dd>
+  <dd><%= link_to "Tickets", @festival.tickets %></dd>
+  <dd><%= link_to "Website", @festival.website %></dd>
+</dl>
+<div class="row">
+  <h3>Info</h3>
+  <p><%= @festival.description %></p>
+</div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="<%= @festival.second_image.url %>">
+</div>
+<div class="row">
+  <h3>Travel</h3>
+  <p><%= @festival.transport %></p>
+</div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="<%= @festival.third_image.url %>">
+</div>
+<div class="row">
+  <h3>Accommodation</h3>
+  <p><%= @festival.accommodation %></p>
+</div>
+    

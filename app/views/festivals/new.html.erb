@@ -90,10 +90,18 @@
   <%= f.text_field :genre %>
   <%= f.label :website %>
   <%= f.text_field :website %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
+  <%= f.label :main_image %>
+  <%= f.file_field :main_image %>
+  <%= f.label :second_image %>
+  <%= f.file_field :second_image %>
+  <%= f.label :third_image %>
+  <%= f.file_field :third_image %>
   <%= f.label :description %>
   <%= f.text_field :description %>
+  <%= f.label :travel %>
+  <%= f.text_field :transport %>
+  <%= f.label :accommodation %>
+  <%= f.text_field :accommodation %>
   <%= f.submit "Create" %>
  <% end %>
 

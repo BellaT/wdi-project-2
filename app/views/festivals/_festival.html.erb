@@ -1,19 +1,19 @@
 <div class="orbit-container">
   <ul data-orbit class="example-orbit orbit-slides-container">
     <li>
-      <img src="<%= festival.image %>" alt="slide 1" />
+      <img src="<%= festival.main_image.url %>" alt="slide 1" />
       <div class="orbit-caption">
         <%= link_to festival.title, festival_path(festival.id) %>
       </div>
     </li>
     <li class="active">
-      <img src="<%= festival.image %>" alt="slide 1" />
+      <img src="<%= festival.main_image.url %>" alt="slide 1" />
       <div class="orbit-caption">
         <%= link_to festival.title, festival_path(festival.id) %>
       </div>
     </li>
     <li>
-      <img src="<%= festival.image %>" alt="slide 1" />
+      <img src="<%= festival.main_image.url %>" alt="slide 1" />
       <div class="orbit-caption">
         <%= link_to festival.title, festival_path(festival.id) %>
       </div>
