@@ -646,7 +646,7 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 // $form-label-font-color: scale-color($black, $lightness: 30%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
-// $input-font-family: inherit;
+$input-font-family: 'Noto Sans', sans-serif; //inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
 // $input-placeholder-font-color: #cccccc;

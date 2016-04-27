@@ -1,7 +1,7 @@
 <ul data-orbit class="example-orbit">
   <% @festivals.each_with_index do |festival, index| %>
   <li>
-    <img src="<%= festival.main_image.url %>" alt="slide <%= index %>" />
+    <div class="testdiv" style="background-image: url(<%= festival.main_image.url %>);"></div>
     <div class="orbit-caption">
       <%= link_to festival.title, festival_path(festival.id) %>
     </div>
