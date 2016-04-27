@@ -1,7 +1,6 @@
-<li>
-  <ul>
-    <li><%= comment.user.try(:name) %></li>
-    <li><%= comment.title %></li>
-    <li><%= comment.comment %></li>
-  </ul>
-</li>
+<div class="row">
+  <div>
+    <%= comment.user.try(:username) %>
+    <%= comment.comment %>
+  </div>
+</div>

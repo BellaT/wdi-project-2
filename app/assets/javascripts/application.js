@@ -24,7 +24,6 @@ $( function() {
       animation: 'slide',
       slide_number: false,
       slide_number_text: false,
-      // bullets: false,
     }
   });
 });
