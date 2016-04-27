@@ -16,5 +16,15 @@
 //= require_tree .
 
 $( function() {
-  $(document).foundation();
+  $(document).foundation({
+    orbit: {
+      resume_on_mouseout: true,
+      timer_speed: 4000,
+      pause_on_hover: true,
+      animation: 'slide',
+      slide_number: false,
+      slide_number_text: false,
+      // bullets: false,
+    }
+  });
 });

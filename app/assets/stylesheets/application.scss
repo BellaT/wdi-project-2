@@ -16,4 +16,34 @@
 
  */
 
+body {
+  background: black;
+  font-family: "Ridley Grotesk";
+ }
+
+h2.vertical-align {
+     position: relative;
+     top: 50%;
+     transform: translateY(-50%);
+     text-align: center;
+     a {
+      color: white;
+      text-shadow: 2px 2px #000000;
+     }
+ }
+
+.example-orbit {
+  img {
+    width: 100%;
+    background-size: cover;
+    max-height: 400px;
+    background-position: 50% 50%;
+  }
+}
+
+label {
+  color: #ddd;
+}
+
+
 

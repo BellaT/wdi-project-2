@@ -1,13 +1,13 @@
 // Place all the styles related to the statics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.medium-4.columns.square {
+.medium-6.columns.square {
   height: 300px !important;
-  width: 300px;
+  // width: 300px;
   background-size: cover;
   background-repeat: no-repeat; 
   background-position: center;
-  border-radius: 5%;
-  margin-bottom: 10px; 
+  border-radius: 3%;
+  border: 5px solid black;
 }
 

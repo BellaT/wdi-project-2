@@ -2,8 +2,8 @@
 
 <% @genres.each do |genre| %>
 
-  <div class="medium-4 medium-offset-2 square columns" style="background-image: url(<%= @festivals.sample.main_image.url %>);" data-equalizer-watch>
-    <h2><%= link_to genre, genre_path(genre) %></h2>
+  <div class="medium-6 square columns" style="background-image: url(<%= @festivals.sample.main_image.url %>);" data-equalizer-watch>
+    <h2 class="vertical-align"><%= link_to genre, genre_path(genre) %></h2>
   </div>
 
 <% end %>

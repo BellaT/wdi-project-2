@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :festivals
+  resources :comments, only: [:create, :destroy]
   get "/locations", to: "statics#locations"
   get "/locations/:location", to: "festivals#location", as: :location
 

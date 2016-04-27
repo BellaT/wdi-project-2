@@ -6,5 +6,6 @@ class Festival < ActiveRecord::Base
   mount_uploader :second_image, FestivalImageUploader
   mount_uploader :third_image, FestivalImageUploader
   acts_as_votable
+  acts_as_commentable
 
 end

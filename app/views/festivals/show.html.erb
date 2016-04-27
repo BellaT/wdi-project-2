@@ -1,17 +1,19 @@
 <div class="parallax-window" data-parallax="scroll" data-image-src="<%= @festival.main_image.url %>">
    <h2><%= @festival.title %></h2>
 </div>
-<dl class="sub-nav row">
-  <dt></dt>
-  <dd><%= @festival.city %>, <%= @festival.location %></dd>
-  <dd><%= @festival.festival_date %></dd>
-  <dd><%= link_to "Tickets", @festival.tickets %></dd>
-  <dd><%= link_to "Website", @festival.website %></dd>
-  <% if !current_user.voted_up_on? @festival %>
-  <dd><%= link_to "Favourite", like_festival_path(@festival.id), method: :post %></dd>
-  <% else %>
-  <dd><%= link_to "Unfavourite", dislike_festival_path(@festival.id), method: :delete %></dd>
-  <% end %>
+<dl class="sub-nav">
+<div class="row">
+    <dd><%= @festival.city %>, <%= @festival.location %></dd>
+    <dd><%= @festival.festival_date %></dd>
+    <dd><%= link_to "Tickets", @festival.tickets %></dd>
+    <dd><%= link_to "Website", @festival.website %></dd>
+    <% if !current_user.voted_up_on? @festival %>
+    <dd class="active right"><%= link_to "Favourite", like_festival_path(@festival.id), method: :post %></dd>
+    <% else %>
+    <dd class="active right"><%= link_to "Unfavourite", dislike_festival_path(@festival.id), method: :delete %></dd>
+    <% end %>
+    <dd class="right"><%= link_to "Edit Festival", edit_festival_path %></dd>
+  </div>
 </dl>
 <div class="row">
   <h3>Info</h3>
@@ -29,4 +31,9 @@
   <h3>Accommodation</h3>
   <p><%= @festival.accommodation %></p>
 </div>
+
+<%= render partial: 'comments/form', locals: { commentable: @festival } %>
+<%= render partial: 'comments/comment', collection: @comments, locals: { commentable: @post } %>
+
+
     

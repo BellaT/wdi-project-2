@@ -6,5 +6,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :rememberable, :trackable, :validatable
 
+  mount_uploader :profile_image, UserImageUploader
   acts_as_voter
 end
