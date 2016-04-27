@@ -1,14 +1,18 @@
-<h1><%= @user.username %></h1>
-
-<% @user.find_liked_items.in_groups_of(2) do |group| %>
-<div class="row" data-equalizer>
-  <div class="medium-4 medium-offset-1 square columns" style="background-image: url(<%= group.first.main_image.url %>);" data-equalizer-watch>
-    <h2><%= link_to group.first.title, festival_path(group.first.id) %></h2>
+<div class="row">
+  <div class="medium-6 square columns">
+    <h3><%= @user.username %></h3>
   </div>
-  <% if group.last != nil %>
-  <div class="medium-4 medium-offset-1 square columns" style="background-image: url(<%= group.last.main_image.url %>);" data-equalizer-watch>
-    <h2><%= link_to group.last.title, festival_path(group.last.id) %></h2>
+
+  <% @user.find_liked_items.in_groups_of(2) do |group| %>
+  <div class="row" data-equalizer>
+    <div class="medium-6 square columns" style="background-image: url(<%= group.first.main_image.url %>);" data-equalizer-watch>
+      <h2><%= link_to group.first.title, festival_path(group.first.id) %></h2>
+    </div>
+    <% if group.last != nil %>
+    <div class="medium-6 square columns" style="background-image: url(<%= group.last.main_image.url %>);" data-equalizer-watch>
+      <h2><%= link_to group.last.title, festival_path(group.last.id) %></h2>
+    </div>
+    <% end %>
   </div>
   <% end %>
 </div>
-<% end %>
