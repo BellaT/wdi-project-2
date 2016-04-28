@@ -2,33 +2,23 @@ User.destroy_all
 Festival.destroy_all
 Favourite.destroy_all
 
-u1 = User.create!(username: "bellataylor",
-                  first_name: "Bella",
-                  last_name: "Taylor",
-                  email: "bella@bella.com",
-                  password: "password")
+u1 = User.create!(username: "bellataylor", first_name: "Bella", last_name: "Taylor", email: "bella@bella.com", password: "password")
 u1.profile_image = Rails.root.join("app/assets/images/Bill-Murray-3.jpg").open
-
 u1.save!
 
-u2 = User.create!(username: "alexchin",
-                  first_name: "Alex",
-                  last_name: "Chin",
-                  email: "alex@alex.com",
-                  password: "password")
+u2 = User.create!(username: "alexchin", first_name: "Alex", last_name: "Chin", email: "alex@alex.com", password: "password")
 u2.profile_image = Rails.root.join("app/assets/images/bill-murray2.jpg").open
-
 u2.save!
 
 f1 = Festival.create!(title: "Sonar Festival",
                       location: "Spain",
                       city: "Barcelona",
-                      festival_date: DateTime.new(2016, 6, 17),
+                      festival_date: DateTime.new(2016, 6, 16),
                       month: "June",
-                      genre: "Techno",
+                      genre: "Electronic",
                       tickets: "https://sonar.es/en/pg/tickets",
                       description: "Sonar is the International Festival of Advanced Music and Congress of Technology and Creativity, celebrated during three days every June in Barcelona. Created in 1994, Sonar is a pioneering cultural event with a unique format and content. It's first class reputation as a leading reference for international festivals is thanks to it's attention in curation, combining a playful nature, the avant-garde, and experimentation with newest trends in dance and electronic music. Positioned at the cutting edge of the electronic music landscape and it's interactions with digital culture, Sonar is able to unite established artists with emerging talent, in all areas of musical and audiovisual production. Sonar's founding values have defined the festival since its inception: the link between creativity and technology, its commitment to being a global event and a meeting point for creative people from different disciplines and communities. Sonar Barcelona's activities are divided into two main locations: Sonar by Day, located in Fira Montjuic, concerts and dj's, showcases and Sonar+D, the international congress focused on the digital creative industries and dedicated to creating professional, business and networking opportunities. Sonar by Night is located at the Fira Gran Via de L'Hospitalet, and hosts live shows and dj sets from the biggest names in international music. Sonar+D presents a series of activities designed to be of use to the various creative communities, providing development sessions, opportunities to exchange ideas and tools, as well as opportunities to secure financing. Sonar+D follows all of the stages of the creative process with one goal: To facilitate and improve relationship between creativity, technology, innovation and business in an organic setting geared towards new creative and professional profiles. Since 2002 Sonar has organized more than 50 events in many different parts of the world, adapting the Sonar philosophy to unique venues and environments, and highlighting the most interesting homegrown talent and the scene in the city where it takes place. As well as the event in Barcelona, Sonar organizes festivals every year in other cities. In previous years, it has travelled to Reykjavik, Stockholm, Copenhagen, Buenos Aires, New York, London, Cape Town, Frankfurt, Seoul, Lisboa, Lyon, Hamburg, Toronto, Montreal, Chicago, Boston, Denver, Oakland, Los Angeles, Tokyo and Osaka, among other destinations around the world.",
-                      transport: "Metro (www.tmb.cat): Line L9 -> Take L9 from the Airport, change at Torrassa. Take L1 in the direction of Fondo, to Espanya.  Aerobús: Line A1 -> Direct from T1 to Plaça Espanya: from 5:35am a 01:05am. Price each way: 5,90€ (single) and 10,20€ (return) – valid 15 days. Max. 10 minute-wait. Line A2 -> Direct from T2 (T2A, T2B and T2C) to Plaça Espanya: from 6am to 1am. Price each way: 5,90€ (single) and 10,20€ (return) – valid 15 days. Max. 10 minute-wait.  Autobús 46: Direct from the Airport (T1 and T2) to Plaça Espanya: from 5am to 00:45am. Max. 15 minute-wait. Price each way: 2,15€",
+                      transport: "The day time part of the Sonar by day Festival takes place in the Fira Montjuic area in Placa d'Espanya. The Fira centre is normally used for large conferences in the city. If you are staying in the centre of town you will need to catch the metro to Espanya station. Getting to Sonar by Night is slightly more complicated than getting to Sonar by Day. You will see hoards of party people around the city struggling to catch taxis and buses to the out of town location. Sonar by Night takes place in a large conference centre called Fira Gran Via, on the outskirts of the city. Take care not to mix up Fira Gran Via mixed up with Fira Montjuic - they are in different locations in the city. When planning your night it is worth planning how you are going to get home before the night has begun. Sonar by Night goes on until 8am, at which point there are thousands of people in a location outside of Barcelona with only a few options home.",
                       accommodation: "There are a huge amount of options for accommodation within Barcelona but those intending on booking something need to move quickly. It is nearly impossible to find accommodation in Barcelona in the week of the event so do not arrive without having booked somewhere first. You may find yourself sleeping on the beach. From hostels to hotels to self-service accommodation Barcelona has got it covered.",
                       website: "https://sonar.es/en/2016/")
 f1.main_image = Rails.root.join("app/assets/images/sonar-head.jpg").open
@@ -39,7 +29,7 @@ f1.save!
 f2 = Festival.create!(title: "Glastonbury Festival",
                       location: "England",
                       city: "Glastonbury",
-                      festival_date: DateTime.new(2016, 6, 24),
+                      festival_date: DateTime.new(2016, 6, 22),
                       month: "June",
                       genre: "Contempory",
                       tickets: "http://www.glastonburyfestivals.co.uk/information/tickets/",
@@ -51,6 +41,38 @@ f2.main_image = Rails.root.join("app/assets/images/glastonbury-main.jpg").open
 f2.second_image = Rails.root.join("app/assets/images/glastonbury-second.jpg").open
 f2.third_image = Rails.root.join("app/assets/images/glastonbury-third.jpg").open
 f2.save!
+
+f3 = Festival.create!(title: "Dekmantel Festival",
+                      location: "Netherlands",
+                      city: "Amsterdam",
+                      festival_date: DateTime.new(2016, 8, 4),
+                      month: "August",
+                      genre: "Electronic",
+                      tickets: "http://www.dekmantelfestival.com/tickets/1/",
+                      description: "One who is consumed with details and perfection is called meticulous. Dekmantel Festival 2016 is about fine-tuning small, yet imminent details, careful and precise. This year’s line-up will be diverse and focused on the best contemporary, experimental and timeless underground electronic music out there. Dekmantel is upping the mixture, but keeping the quality. It goes without saying that the Amsterdamse Bos remains the pinnacle of Dekmantel Festival. They take pride in the fact that over the years, they haven’t lost their singular atmosphere. Bigger isn’t always better. They want dance floors bursting with energy, yet spacious surroundings, and a killer line-up that equals a cool crowd. But there’s more. For the first time, they’re going north and they’ll bring a boat. Next to their packed daytime program, they are heading towards the city’s IJ river during opening night, to set up shop at several landmark locations. EYE is the film museum and arthouse cinema on the northern bank, Tolhuistuin a club venue that offers a sense of seclusion and hiding from what's across the busy other end of the water. Furthermore they are revisiting the Muziekgebouw where they will be taking over The Bimhuis as theyll, the Dutch concert hall for improv music. Moreover, they are again hosting an extensive night program on Thursday, Friday and Saturday at Melkweg. The 2016 line-up includes James Holden and Camilo Tirado's new show 'Outdoor Museum of Fractals', Afrobeat legend Tony Allen performing with his band, Lee 'Scratch' Perry & Adrian Sherwood, the only 2016 appearance of post-punk band ESG and the return of Dekmantel favourites such as Ricardo Villalobos, Dixon, Moodymann, DJ Harvey, Donato Dozzy and Jeff Mills.",
+                      transport: "Amsterdam is a world-class international transport hub and there are countless ways of getting into the city. Many travellers fly into the award-winning Amsterdam Airport Schiphol, while hopping on a train is also a great option – convenient and cost effective, the rail network in the Netherlands is second to none. And of course the road network provides easy access to Amsterdam for those keen to travel by car or coach. Amsterdam also boasts an impressive public transport network including metros, buses, trams, ferries and trains to help you get around the capital. The venues are linked with free ferry services.",
+                      accommodation: "If you prefer to stay put for the duration of the festival, there is the option of purchasing a camping ticket. The ticket is independent of your festival ticket with camping not organised or operated by Dekmantel. Head to the Dekmantel website for tickets and more information. Put up your tent at Camping Amsterdamse Bos or let yourself be pampered at Spa Sport Hotel ZUIVER for a good night’s rest. Both are beautifully situated and close to all the attractions of the forest. Camping Amsterdamse Bos is situated on the south edge of the forest, on Bosrandweg. It has good bus links to Amsterdam city centre and beautiful pitches for tents, caravans and campers. There are also holiday cottages available for rent. Camping season: 1 January until 31 December.",
+                      website: "http://www.dekmantelfestival.com/")
+f3.main_image = Rails.root.join("app/assets/images/dekmantel-main.jpg").open
+f3.second_image = Rails.root.join("app/assets/images/dekmantel-second.jpg").open
+f3.third_image = Rails.root.join("app/assets/images/dekmantel3.jpg").open
+f3.save!
+
+f4 = Festival.create!(title: "Dimensions Festival",
+                      location: "Croatia",
+                      city: "Pula",
+                      festival_date: DateTime.new(2016, 8, 24),
+                      month: "August",
+                      genre: "Electronic",
+                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
+                      description: "Dimensions Festival is an underground electronic and urban festival in Croatia. Incredible lineups are hosted in an abandoned Roman fort, making for one of the most spectacular party locations in Europe. Add in the fact that the glorious Adriatic coast is just a short distance away, and you've got all the makings of the ultimate summer festival. Dimensions take as a slightly more niche look at European underground music than its sister, Outlook Festival, and has been producing some of the summer's stand-out moments ever since its very first edition in 2012. Beach parties supplement the historic Fort venue, with worldwide A-listers guaranteed year after year. With a higher technical specification of sound systems than you will find at any other festival of its size, Dimensions is the perfect place to enjoy the deep end of electronica, the finest in house, techno, world, disco, dubstep and other electronic sounds. With chilled beats playing during the daytime beach sessions so you can relax and rejuvenate, and daily boat parties taking off from the harbour there is plenty to see and do. Live performances this year from the likes of Massive Attack, Moritz Von Oswald Trio FT Tony Allen and Max Loderbauer, Hiatus Kaiyote, Mood II Swing, Moodymann, Joe Claussell and more…",
+                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
+                      accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
+                      website: "http://www.dimensionsfestival.com/")
+f4.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f4.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f4.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f4.save!
 
 
 

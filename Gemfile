@@ -7,6 +7,7 @@ gem 'carrierwave', '0.10.0'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'acts_as_commentable'
 gem 'font-awesome-sass'
+gem 'ransack'
 
 gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
