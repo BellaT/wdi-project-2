@@ -1,2 +1,88 @@
-<h1>Festivals#edit</h1>
-<p>Find me in app/views/festivals/edit.html.erb</p>
+<div class="row">
+  <div class="large-12 columns">
+    <h3>Edit</h3>
+  </div>
+</div>
+<%= form_for @festival do |f| %>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :festival_name %>
+    <%= f.text_field :title %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-4 columns">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="large-4 columns">
+    <%= f.label :country %>
+    <%= f.collection_select :location, @locations, :to_s, :to_s, prompt: true %>
+  </div>
+  <div class="large-4 columns">
+    <%= f.label :festival_date %>
+    <%= f.date_field :festival_date %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-6 columns">
+    <%= f.label :genre %>
+    <%= f.collection_select :genre, @genres, :to_s, :to_s, prompt: true %>
+  </div>
+  <div class="large-6 columns">
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :main_image %>
+    <%= f.file_field :main_image %>
+    <%= f.label :second_image %>
+    <%= f.file_field :second_image %>
+    <%= f.label :third_image %>
+    <%= f.file_field :third_image %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :travel %>
+    <%= f.text_field :transport %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.label :accommodation %>
+    <%= f.text_field :accommodation %>
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <%= f.submit "Update", class: "button radius" %> 
+  </div>
+</div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

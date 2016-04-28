@@ -112,7 +112,15 @@ input[type=text].search-bar:active {
 }
 
 
+.parallax-window {
+  position: relative;
 
+  h2 {
+    margin-top: 1em;
+    text-shadow: 2px 2px 2px rgba(50,50,50,0.8)
+  }
+
+}
 
 
 

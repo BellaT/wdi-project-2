@@ -3,8 +3,7 @@
     <h3>Add A Festival</h3>
   </div>
 </div>
-<form>
-  <%= form_for @festival do |f| %>
+<%= form_for @festival do |f| %>
   <div class="row">
     <div class="large-12 columns">
       <%= f.label :festival_name %>
@@ -68,11 +67,10 @@
       <%= f.submit "Create", class: "button radius" %> 
     </div>
   </div>
-  <% end %>
-</form>
+<% end %>
 
 
- 
+
 
 
 

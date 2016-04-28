@@ -33,7 +33,9 @@
 
        <!-- Left Nav Section -->
        <ul class="left">
+        <% if current_user && current_user.admin %>
          <li><%= link_to "Add Festival", new_festival_path %></li>
+        <% end %>
        </ul>
      </section>
    </nav>

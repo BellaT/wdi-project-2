@@ -18,15 +18,14 @@ class FestivalsController < ApplicationController
   end
 
   def create
+    raise
     @festival = Festival.new(festival_params)
-    respond_to do |format|
-      if @festival.save
-        format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
-        format.json { render :show, status: :created, location: @festival }
-      else
-        format.html { render :new }
-        format.json { render json: @festival.errors, status: :unprocessable_entity }
-      end
+    if @festival.save
+      format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
+      format.json { render :show, status: :created, location: @festival }
+    else
+      format.html { render :new }
+      format.json { render json: @festival.errors, status: :unprocessable_entity }
     end
   end
 
@@ -35,13 +34,15 @@ class FestivalsController < ApplicationController
   end
 
   def update
+    raise
     @festival = Festival.find(params[:id])
-      if @festival.update(festival_params)
-        flash[:success] = "Changes have been made"
-        redirect_to new_festival_path
-      else 
-        render "edit"
-      end
+    if @festival.update(festival_params)
+      format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
+      format.json { render :show, status: :created, location: @festival }
+    else
+      format.html { render :new }
+      format.json { render json: @festival.errors, status: :unprocessable_entity }
+    end
   end
 
   def destroy

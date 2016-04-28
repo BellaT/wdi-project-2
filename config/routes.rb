@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :festivals
+
+  put "/festivals/:id", to: "festivals#update", as: :force_edit_festival
+  post "/festivals", to: "festivals#create", as: :force_new_festival
+
   resources :comments, only: [:create, :destroy]
   get "/locations", to: "statics#locations"
   get "/locations/:location", to: "festivals#location", as: :location

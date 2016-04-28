@@ -2,11 +2,11 @@ User.destroy_all
 Festival.destroy_all
 Favourite.destroy_all
 
-u1 = User.create!(username: "bellataylor", first_name: "Bella", last_name: "Taylor", email: "bella@bella.com", password: "password")
+u1 = User.create!(username: "bellataylor", first_name: "Bella", last_name: "Taylor", email: "bella@bella.com", password: "password", admin: true)
 u1.profile_image = Rails.root.join("app/assets/images/Bill-Murray-3.jpg").open
 u1.save!
 
-u2 = User.create!(username: "alexchin", first_name: "Alex", last_name: "Chin", email: "alex@alex.com", password: "password")
+u2 = User.create!(username: "alexchin", first_name: "Alex", last_name: "Chin", email: "alex@alex.com", password: "password", admin: true)
 u2.profile_image = Rails.root.join("app/assets/images/bill-murray2.jpg").open
 u2.save!
 
@@ -27,7 +27,7 @@ f1.third_image = Rails.root.join("app/assets/images/sonar3.jpg").open
 f1.save!
 
 f2 = Festival.create!(title: "Glastonbury Festival",
-                      location: "England",
+                      location: "UK",
                       city: "Glastonbury",
                       festival_date: DateTime.new(2016, 6, 22),
                       month: "June",
@@ -66,7 +66,7 @@ f4 = Festival.create!(title: "Dimensions Festival",
                       genre: "Electronic",
                       tickets: "http://www.dimensionsfestival.com/tickets/uk/",
                       description: "Dimensions Festival is an underground electronic and urban festival in Croatia. Incredible lineups are hosted in an abandoned Roman fort, making for one of the most spectacular party locations in Europe. Add in the fact that the glorious Adriatic coast is just a short distance away, and you've got all the makings of the ultimate summer festival. Dimensions take as a slightly more niche look at European underground music than its sister, Outlook Festival, and has been producing some of the summer's stand-out moments ever since its very first edition in 2012. Beach parties supplement the historic Fort venue, with worldwide A-listers guaranteed year after year. With a higher technical specification of sound systems than you will find at any other festival of its size, Dimensions is the perfect place to enjoy the deep end of electronica, the finest in house, techno, world, disco, dubstep and other electronic sounds. With chilled beats playing during the daytime beach sessions so you can relax and rejuvenate, and daily boat parties taking off from the harbour there is plenty to see and do. Live performances this year from the likes of Massive Attack, Moritz Von Oswald Trio FT Tony Allen and Max Loderbauer, Hiatus Kaiyote, Mood II Swing, Moodymann, Joe Claussell and more…",
-                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
+                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntizela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
                       accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
                       website: "http://www.dimensionsfestival.com/")
 f4.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
@@ -77,34 +77,98 @@ f4.save!
 f5 = Festival.create!(title: "Roskilde Festival",
                       location: "Denmark",
                       city: "Roskilde",
-                      festival_date: DateTime.new(2016, 8, 24),
-                      month: "August",
-                      genre: "Electronic",
+                      festival_date: DateTime.new(2016, 6, 25),
+                      month: "June",
+                      genre: "Rock",
                       tickets: "http://www.roskilde-festival.dk/tickets",
                       description: "Roskilde Festival is the largest music and culture event in Northern Europe. First held in 1971, Roskilde Festival has grown steadily in popularity and size and now attracts some 80,000 people annually from all over the world who come to enjoy a diverse mix of music, arts and camping. Internationally renowned artists like Bob Marley, Bruce Springsteen and The E Street Band, Kanye West, Metallica, Prince, Radiohead, Rihanna and U2 have all played Roskilde in previous years and the festival is THE place to experience both established as well as new acts at their best. Attending Roskilde has become a rite of passage for most Danes, and many people come just for the party atmosphere of the camp sites. To see more about the festival, please check out their website. Your ticket grants you access to both the camping area and festival site. The festival is run by a non-profit organisation and all proceeds will go to humanitarian and cultural purposes.",
-                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
-                      accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
+                      transport: "Getting here is really easy. Roskilde is only 30 minutes away from Copenhagen. Direct trains run every hour from the airport and all the time from Copenhagen Central Station. During the festival you can travel between Roskilde town and the festival site with shuttle buses for 20 DKK (one way). These buses run all the time from 7am till midnight.",
+                      accommodation: "Your full festival ticket includes free access to the regular camping area where you can bring your own tent. The campsite is open from Saturday 25 June to Sunday 3 July and is split into areas, each area has a central open space and building called an Agora. At the Agoras you can cook, get information and each Agora has a party theme and it's own non festival entertainment. Each Agora is lettered so you know which camping area you are staying in. Agora J is the quiet area, anyone who does not follow the rules and expectation will be asked to camp in another area, out of respect to those who wish to camp quietly. With entrance booking, you can book which entrance you would like to enter the camping area. It's not a case of booking where you camp, but due to crowd control and the large numbers that attend Roskilde, allocated entrance is easier for both security guards and attendees.",
                       website: "http://www.roskilde-festival.dk/")
-f5.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
-f5.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
-f5.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f5.main_image = Rails.root.join("app/assets/images/roskilde1.jpg").open
+f5.second_image = Rails.root.join("app/assets/images/roskilde2.jpg").open
+f5.third_image = Rails.root.join("app/assets/images/roskilde3.jpg").open
 f5.save!
 
-f6 = Festival.create!(title: "Dimensions Festival",
-                      location: "Croatia",
-                      city: "Pula",
-                      festival_date: DateTime.new(2016, 8, 24),
-                      month: "August",
-                      genre: "Electronic",
+f6 = Festival.create!(title: "CMA Music Festival",
+                      location: "USA",
+                      city: "Nashville",
+                      festival_date: DateTime.new(2016, 6, 9),
+                      month: "June",
+                      genre: "Country",
                       tickets: "http://www.dimensionsfestival.com/tickets/uk/",
-                      description: "Dimensions Festival is an underground electronic and urban festival in Croatia. Incredible lineups are hosted in an abandoned Roman fort, making for one of the most spectacular party locations in Europe. Add in the fact that the glorious Adriatic coast is just a short distance away, and you've got all the makings of the ultimate summer festival. Dimensions take as a slightly more niche look at European underground music than its sister, Outlook Festival, and has been producing some of the summer's stand-out moments ever since its very first edition in 2012. Beach parties supplement the historic Fort venue, with worldwide A-listers guaranteed year after year. With a higher technical specification of sound systems than you will find at any other festival of its size, Dimensions is the perfect place to enjoy the deep end of electronica, the finest in house, techno, world, disco, dubstep and other electronic sounds. With chilled beats playing during the daytime beach sessions so you can relax and rejuvenate, and daily boat parties taking off from the harbour there is plenty to see and do. Live performances this year from the likes of Massive Attack, Moritz Von Oswald Trio FT Tony Allen and Max Loderbauer, Hiatus Kaiyote, Mood II Swing, Moodymann, Joe Claussell and more…",
-                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
-                      accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
+                      description: "Every summer, thousands of country music fans from all over the world move in to Nashville for four days to experience CMA Music Festival. Four days of music from hundreds of artists including live concerts, meet & greets, autograph signings, celebrity sporting events, and more. Stop by Fan Fair X to meet some of your favorite stars, witness the nightly concerts at Nissan Stadium, check out the free daily concerts happening downtown, and make sure you know about the events around town for the 2016 CMA Music Festival in Nashville. Tickets are only needed for the Nightly Concerts at Nissan Stadium and for access to Fan Fair X. But there are 4 days of free live music all over downtown Nashville as part of CMA Music Festival. The music plays on the streets, at the parks, and in the clubs...and it's all free. Now's the time to plan your trip. Rooms fill fast for the Fest. Book your room today. ",
+                      transport: "Nashville is one of only six cities in the nation where three interstates connect. I65 connects the city with Louisville, Indianapolis and Chicago to the north and Birmingham, Montgomery and Mobile to the south. Nashville is bisected by I40, an east-west freeway that also passes through cities that include Asheville, Knoxville, Memphis, Little Rock and Oklahoma City. I24 crosses the city from the northwest to the southeast, providing convenient travel from St. Louis, Chattanooga and Atlanta. Cabs are available from the taxi stand on the ground level of the airport. Nashville features a flat fee service triangle between the airport, downtown and Gaylord Opryland Resort & Convention Center. From point to point, taxi fares are currently set at 25 dollars per cab for up to four passengers; within the triangle, charges should not exceed the flat-rate fare, which should be posted in the rear window of the taxi. For trips outside the triangle, consult the meter rates posted in the cab.",
+                      accommodation: "With more than 37,000 hotel rooms in the city and growing, there are hotel options to fit every price point, location and need. Choose luxury, affordability, boutique, or business or choose a hotel close to your favorite Nashville attractions or events. No matter what you choose, Nashville offers hotel accommodations to satisfy all of your needs. Nashville also has vacation rentals offer fully furnished lofts, condos, and apartment-style lodging. If you are traveling on an RV or want to enjoy a night under the stars, there are campgrounds, complete with full amenities, in and around Nashville that cater to our more adventurous visitors.",
                       website: "http://www.dimensionsfestival.com/")
-f6.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
-f6.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
-f6.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f6.main_image = Rails.root.join("app/assets/images/cma1.jpg").open
+f6.second_image = Rails.root.join("app/assets/images/cma2.jpg").open
+f6.third_image = Rails.root.join("app/assets/images/cma3.jpg").open
 f6.save!
+
+f7 = Festival.create!(title: "The Great Escape",
+                      location: "UK",
+                      city: "Brighton",
+                      festival_date: DateTime.new(2016, 5, 19),
+                      month: "May",
+                      genre: "Indie",
+                      tickets: "http://www.ticketweb.co.uk/feature/thegreatescape/?language=en-us",
+                      description: "Since being founded in 2006, The Great Escape has been firmly established internationally as the leading event for showcasing new music. Taking place in Brighton over 3 days in May, The Great Escape kicks starts the festival season, introducing 15,000 music lovers to the key artists and sounds of the year. Over 300 bands playing in 30 venues over 3 days, pre publicised performances, and impromptu street gigs spring up all over town. The alternative escape, numerous club nights, label parties, industry showcases, unique collaborations and outdoor gigs all add to the festivities.",
+                      transport: "Getting to Brighton is easy, wherever you’re travelling from. It takes just under an hour by rail from London, 45 minutes by road from the M25 and half an hour from London Gatwick airport. There are also regular coach services connecting London Heathrow and London Gatwick airports.",
+                      accommodation: "With so much stylish tourist accommodation, Brighton ensures that back to base doesn’t mean back to basics. If you are travelling on a shoestring or simply want a budget option for your stay, hostels in Brighton & Hove are a great option. From budget to luxury self catering accommodation, Brighton offers a wide selection of high standard, fully furnished and equipped self catering establishments, holiday lets and business rentals, many with a seaview. So whether you're on a budget or want to live it up in deluxe style, the city offers a range of Brighton self catering options for every pocket.",
+                      website: "http://greatescapefestival.com/")
+f7.main_image = Rails.root.join("app/assets/images/great-escape1.jpg").open
+f7.second_image = Rails.root.join("app/assets/images/great-escape2.jpeg").open
+f7.third_image = Rails.root.join("app/assets/images/brighton3.jpg").open
+f7.save!
+
+f8 = Festival.create!(title: "Brooklyn Hip Hop Festival",
+                      location: "USA",
+                      city: "New York",
+                      festival_date: DateTime.new(2016, 7, 13),
+                      month: "July",
+                      genre: "Hip Hop",
+                      tickets: "https://www.eventbrite.com/e/12th-annual-brooklyn-hip-hop-festival-tickets-23196448201?discount=ILOVEBHF16",
+                      description: "As New York City's largest hip hop cultural event, the festival showcases the positive aspects of hip hop culture by highlighting hip hop's legacy as an agent of artistic progression, community building and social change. BHF 2016 events will continue to reflect the full range of hip hop culture, which spans music, film, academics, grassroots empowerment and more.",
+                      transport: "",
+                      accommodation: "",
+                      website: "http://www.bkhiphopfestival.com/about-2/")
+f8.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f8.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f8.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f8.save!
+
+f9 = Festival.create!(title: "CMA Music Festival",
+                      location: "USA",
+                      city: "Nashville",
+                      festival_date: DateTime.new(2016, 6, 9),
+                      month: "June",
+                      genre: "Country",
+                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
+                      description: "",
+                      transport: "",
+                      accommodation: "",
+                      website: "http://www.dimensionsfestival.com/")
+f9.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f9.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f9.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f9.save!
+
+f10 = Festival.create!(title: "CMA Music Festival",
+                      location: "USA",
+                      city: "Nashville",
+                      festival_date: DateTime.new(2016, 6, 9),
+                      month: "June",
+                      genre: "Country",
+                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
+                      description: "",
+                      transport: "",
+                      accommodation: "",
+                      website: "http://www.dimensionsfestival.com/")
+f10.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f10.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f10.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f10.save!
 
 
 
