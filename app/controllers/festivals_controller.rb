@@ -19,7 +19,6 @@ class FestivalsController < ApplicationController
   end
 
   def create
-    raise
     @festival = Festival.new(festival_params)
     if @festival.save
       format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
@@ -50,22 +49,34 @@ class FestivalsController < ApplicationController
   end
 
   def genre
+    @q = Festival.search(params[:q])
     @festivals = Festival.where(genre: params[:genre])
+    @search = params[:genre]
+    @orbit_festivals = @festivals.shuffle.take 3
     render :"festivals/index"
   end
 
   def location
+    @q = Festival.search(params[:q])
     @festivals = Festival.where(location: params[:location])
+    @search = params[:location]
+    @orbit_festivals = @festivals.shuffle.take 3
     render :"festivals/index"
   end
 
   def festival_date
+    @q = Festival.search(params[:q])
     @festivals = Festival.where(festival_date: params[:festival_date])
+    @search = params[:festival_date]
+    @orbit_festivals = @festivals.shuffle.take 3
     render :"festivals/index"
   end
 
   def month
+    @q = Festival.search(params[:q])
     @festivals = Festival.search_by_month(params[:month])
+    @search = params[:month]
+    @orbit_festivals = @festivals.shuffle.take 3
     render :"festivals/index"
   end
 
@@ -78,5 +89,7 @@ class FestivalsController < ApplicationController
       @genres = Festival.all.map(&:genre).uniq
       @locations = Festival.all.map(&:location).uniq
     end
+
+
 
 end

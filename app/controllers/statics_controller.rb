@@ -18,4 +18,5 @@ class StaticsController < ApplicationController
     @festivals = Festival.all
     @months = Date::MONTHNAMES.slice(1,12)
   end
+
 end

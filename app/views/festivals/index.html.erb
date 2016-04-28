@@ -1,35 +1,45 @@
-<ul data-orbit class="example-orbit">
-  <% @orbit_festivals.each_with_index do |festival, index| %>
-  <li>
-    <div class="testdiv" style="background-image: url(<%= festival.main_image.url %>);"></div>
-    <div class="orbit-caption">
-      <%= link_to festival.title, festival_path(festival.id) %>
-    </div>
-  </li>
-  <% end %>
-</ul> 
+<% if current_page?(controller: 'festivals', action: 'index') %>
+  <ul data-orbit class="example-orbit">
+    <% @orbit_festivals.each_with_index do |festival, index| %>
+    <li>
+      <div class="testdiv" style="background-image: url(<%= festival.main_image.url %>);"></div>
+      <div class="orbit-caption">
+        <%= link_to festival.title, festival_path(festival.id) %>
+      </div>
+    </li>
+    <% end %>
+  </ul> 
 
-<div class="row">
-  <%= search_form_for @q do |f| %>
-  <div class="small-10 columns">
-    <%= f.text_field :title_or_genre_or_location_or_city_or_month_cont, class: "search-bar" %>
+  <div class="row">
+    <%= search_form_for @q do |f| %>
+    <div class="small-10 columns">
+      <%= f.text_field :title_or_genre_or_location_or_city_or_month_cont, class: "search-bar" %>
+    </div>
+    <div class="small-2 columns">
+      <%= f.submit "Search", class: "button tiny", class: "search-bar-button" %>
+    </div>
+    <% end %> 
   </div>
-  <div class="small-2 columns">
-    <%= f.submit "Search", class: "button tiny", class: "search-bar-button" %>
+<% else %>
+
+  <div class="row">
+    <h4>Searching festivals by <%= @search %></h4>
   </div>
-  <% end %> 
-</div>
+
+<% end %>
+
+
     
 <% @festivals.in_groups_of(2) do |group| %>
   <div class="row" data-equalizer>  
   <% group.compact.each do |festival| %>
-  <%= link_to(festival_path(festival.id)) do  %>
-  <div class="medium-6 square columns" style="background-image: url(<%= festival.main_image.url %>);" data-equalizer-watch>
-    <h2 class="vertical-align">
-      <%= link_to festival.title, festival_path(festival.id) %>
-    </h2>
-  </div>
-  <% end %>
+    <%= link_to festival_path(festival.id) do %>
+      <div class="medium-6 square columns" style="background-image: url(<%= festival.main_image.url %>);" data-equalizer-watch>
+        <h2 class="vertical-align">
+          <%= festival.title %>
+        </h2>
+      </div>
+    <% end %>
   <% end %>
   </div>
 <% end %>

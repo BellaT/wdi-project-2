@@ -2,9 +2,11 @@
 
 <% @locations.each do |location| %>
 
-  <div class="medium-6 square columns" style="background-image: url(<%= @festivals.sample.second_image.url %>);" data-equalizer-watch>
-    <h2 class="vertical-align"><%= link_to location, location_path(location) %></h2>
-  </div>
+  <%= link_to location_path(location) do %>
+    <div class="medium-6 square columns" style="background-image: url(<%= @festivals.sample.second_image.url %>);" data-equalizer-watch>
+      <h2 class="vertical-align"><%= location %></h2>
+    </div>
+  <% end %>
 
 <% end %>
 

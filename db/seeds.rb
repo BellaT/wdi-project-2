@@ -130,44 +130,44 @@ f8 = Festival.create!(title: "Brooklyn Hip Hop Festival",
                       genre: "Hip Hop",
                       tickets: "https://www.eventbrite.com/e/12th-annual-brooklyn-hip-hop-festival-tickets-23196448201?discount=ILOVEBHF16",
                       description: "As New York City's largest hip hop cultural event, the festival showcases the positive aspects of hip hop culture by highlighting hip hop's legacy as an agent of artistic progression, community building and social change. BHF 2016 events will continue to reflect the full range of hip hop culture, which spans music, film, academics, grassroots empowerment and more.",
-                      transport: "",
-                      accommodation: "",
+                      transport: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      accommodation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
                       website: "http://www.bkhiphopfestival.com/about-2/")
-f8.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
-f8.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
-f8.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f8.main_image = Rails.root.join("app/assets/images/brooklyn1.jpg").open
+f8.second_image = Rails.root.join("app/assets/images/brooklyn3.jpg").open
+f8.third_image = Rails.root.join("app/assets/images/brooklyn2.jpg").open
 f8.save!
 
-f9 = Festival.create!(title: "CMA Music Festival",
-                      location: "USA",
-                      city: "Nashville",
-                      festival_date: DateTime.new(2016, 6, 9),
-                      month: "June",
-                      genre: "Country",
-                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
-                      description: "",
-                      transport: "",
-                      accommodation: "",
-                      website: "http://www.dimensionsfestival.com/")
-f9.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
-f9.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
-f9.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f9 = Festival.create!(title: "Nice Jazz Festival",
+                      location: "France",
+                      city: "Nice",
+                      festival_date: DateTime.new(2016, 7, 13),
+                      month: "July",
+                      genre: "Jazz",
+                      tickets: "http://www.nicejazzfestival.fr/en/billetterie",
+                      description: "With its first event dating back to 1948, Nice Jazz Festival is one of the oldest jazz festivals in Europe. Nowadays it is an international gathering, and one of the French Riviera’s unmissable events. Nice Jazz Festival has moved from the Cimiez arenas to the centre of the city. It has also opened up to a variety of musical trends. The festival has two different atmospheres, with bands performing on two stages at once, and a total of six stages every night for five days. Over 30,000 people come to enjoy its quality line-up.",
+                      transport: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      accommodation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      website: "http://www.nicejazzfestival.fr/en/")
+f9.main_image = Rails.root.join("app/assets/images/nice-jazz1.jpg").open
+f9.second_image = Rails.root.join("app/assets/images/nice-jazz3.jpg").open
+f9.third_image = Rails.root.join("app/assets/images/nice-jazz2.jpg").open
 f9.save!
 
-f10 = Festival.create!(title: "CMA Music Festival",
-                      location: "USA",
-                      city: "Nashville",
-                      festival_date: DateTime.new(2016, 6, 9),
-                      month: "June",
-                      genre: "Country",
-                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
-                      description: "",
-                      transport: "",
-                      accommodation: "",
-                      website: "http://www.dimensionsfestival.com/")
-f10.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
-f10.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
-f10.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f10 = Festival.create!(title: "BPM Festival",
+                      location: "Mexico",
+                      city: "Playa del Carmen",
+                      festival_date: DateTime.new(2016, 1, 8),
+                      month: "January",
+                      genre: "Electronic",
+                      tickets: "http://thebpmfestival.com/festival/tickets/",
+                      description: "Celebrating its 8th anniversary, The BPM Festival will make its return to Playa del Carmen, Mexico on January 8-17, 2016. Since its inception, BPM has considerably increased in size and roster of global talent, quickly establishing itself as an essential stop on the festival circuit for all underground dance music aficionados and as an essential winter holiday. The ten-day festival provides a distinctive opportunity for attendees to enjoy the beauty of Mexico’s Yucatan Peninsula in an idyllic beach setting...and dance around the clock.",
+                      transport: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      accommodation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      website: "http://thebpmfestival.com/")
+f10.main_image = Rails.root.join("app/assets/images/bpm4.jpg").open
+f10.second_image = Rails.root.join("app/assets/images/bpm2.jpg").open
+f10.third_image = Rails.root.join("app/assets/images/bpm3.jpg").open
 f10.save!
 
 

@@ -15,25 +15,24 @@
  //= require foundation_and_overrides
 
  */
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
-@import "font-awesome-sprockets";
-@import "font-awesome";
+ @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
-body {
+ body {
   background: black;
   font-family: "Ridley Grotesk";
- }
+}
 
 h2.vertical-align {
-     position: relative;
-     top: 50%;
-     transform: translateY(-50%);
-     text-align: center;
-     a {
-      color: white;
-      text-shadow: 2px 2px #000000;
-     }
- }
+ position: relative;
+ top: 50%;
+ transform: translateY(-50%);
+ text-align: center;
+ color: white;
+ text-shadow: 2px 2px #000000;
+ 
+}
 
 .example-orbit {
   img {
@@ -119,7 +118,10 @@ input[type=text].search-bar:active {
     margin-top: 1em;
     text-shadow: 2px 2px 2px rgba(50,50,50,0.8)
   }
+}
 
+.small-profile {
+  height: 40px;
 }
 
 
