@@ -6,6 +6,7 @@ class FestivalsController < ApplicationController
   def index
     @q = Festival.search(params[:q])
     @festivals = @q.result(distinct: true)
+    @orbit_festivals = @festivals.shuffle.take 3
   end
 
   def new
