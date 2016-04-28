@@ -4,7 +4,8 @@ class FestivalsController < ApplicationController
 
   
   def index
-    @festivals = Festival.all
+    @q = Festival.search(params[:q])
+    @festivals = @q.result(distinct: true)
   end
 
   def new

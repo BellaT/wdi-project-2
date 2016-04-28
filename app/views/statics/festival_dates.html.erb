@@ -2,7 +2,7 @@
 
 <% @months.each do |month| %>
 
-  <div class="medium-6 square columns" style="background-image: url(<%= @festivals.sample.main_image.url %>);" data-equalizer-watch>
+  <div class="medium-6 square columns" style="background-image: url(<%= @festivals.sample.third_image.url %>);" data-equalizer-watch>
     <h2 class="vertical-align"><%= link_to month, month_path(month) %></h2>
   </div>
 

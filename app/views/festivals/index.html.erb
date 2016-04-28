@@ -7,7 +7,19 @@
     </div>
   </li>
   <% end %>
-</ul>  
+</ul> 
+
+<div class="row">
+  <%= search_form_for @q do |f| %>
+  <div class="small-10 columns">
+    <%= f.text_field :title_or_genre_or_location_or_city_or_month_cont, class: "search-bar" %>
+  </div>
+  <div class="small-2 columns">
+    <%= f.submit "Search", class: "button tiny", class: "search-bar-button" %>
+  </div>
+  <% end %> 
+</div>
+    
 
 <% @festivals.in_groups_of(2) do |group| %>
 <div class="row" data-equalizer>

@@ -74,5 +74,37 @@ f4.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
 f4.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
 f4.save!
 
+f5 = Festival.create!(title: "Roskilde Festival",
+                      location: "Denmark",
+                      city: "Roskilde",
+                      festival_date: DateTime.new(2016, 8, 24),
+                      month: "August",
+                      genre: "Electronic",
+                      tickets: "http://www.roskilde-festival.dk/tickets",
+                      description: "Roskilde Festival is the largest music and culture event in Northern Europe. First held in 1971, Roskilde Festival has grown steadily in popularity and size and now attracts some 80,000 people annually from all over the world who come to enjoy a diverse mix of music, arts and camping. Internationally renowned artists like Bob Marley, Bruce Springsteen and The E Street Band, Kanye West, Metallica, Prince, Radiohead, Rihanna and U2 have all played Roskilde in previous years and the festival is THE place to experience both established as well as new acts at their best. Attending Roskilde has become a rite of passage for most Danes, and many people come just for the party atmosphere of the camp sites. To see more about the festival, please check out their website. Your ticket grants you access to both the camping area and festival site. The festival is run by a non-profit organisation and all proceeds will go to humanitarian and cultural purposes.",
+                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
+                      accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
+                      website: "http://www.roskilde-festival.dk/")
+f5.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f5.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f5.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f5.save!
+
+f6 = Festival.create!(title: "Dimensions Festival",
+                      location: "Croatia",
+                      city: "Pula",
+                      festival_date: DateTime.new(2016, 8, 24),
+                      month: "August",
+                      genre: "Electronic",
+                      tickets: "http://www.dimensionsfestival.com/tickets/uk/",
+                      description: "Dimensions Festival is an underground electronic and urban festival in Croatia. Incredible lineups are hosted in an abandoned Roman fort, making for one of the most spectacular party locations in Europe. Add in the fact that the glorious Adriatic coast is just a short distance away, and you've got all the makings of the ultimate summer festival. Dimensions take as a slightly more niche look at European underground music than its sister, Outlook Festival, and has been producing some of the summer's stand-out moments ever since its very first edition in 2012. Beach parties supplement the historic Fort venue, with worldwide A-listers guaranteed year after year. With a higher technical specification of sound systems than you will find at any other festival of its size, Dimensions is the perfect place to enjoy the deep end of electronica, the finest in house, techno, world, disco, dubstep and other electronic sounds. With chilled beats playing during the daytime beach sessions so you can relax and rejuvenate, and daily boat parties taking off from the harbour there is plenty to see and do. Live performances this year from the likes of Massive Attack, Moritz Von Oswald Trio FT Tony Allen and Max Loderbauer, Hiatus Kaiyote, Mood II Swing, Moodymann, Joe Claussell and more…",
+                      transport: "For those flying to the festival there are transfers to the festival site organised from all the following airports:  Trieste, Ljubljana, Zagreb, Venice Treviso and Venice Marco-Polo. For those of you wanting to keep things simple, you can book your Festival ticket, travel and accommodation all in one place with Mainstage Travel. Pula Airport is the closest to the festival site, located just a 20-minute drive away. Direct shuttles run between the Airport and Puntižela (where the festival site is located) departing after the arrival of every plane. Airlines serving Pula Airport include Ryan Air, Easy Jet, Air Berlin, Edelweiss, Jet2.com, Norwegian, Aer Lingus, Germanwings and Croatia Airlines.lude Ryan Air, Easy Jet, Air Berlin and Edelweiss.",
+                      accommodation: "For ease of access to the site and general good vibes they advise that people stay in Camping Brioni, directly connected to the beach where the daytime parties take place. Dimensions offers a range of on-site accommodation including Standard and Boutique Camping, Hostel Rooms and Hostel Tents. For those of you wanting a bit of downtime from the festival there are plenty of off-site options including a wide range of hotels, private apartments and luxury camping located minutes away from the site. Dimensions works closely with local agents and landlords to bring you exclusive apartments in and around the local area of the festival, most of which you will not find anywhere else. Please visit the Mainstage Travel page for a full list of options including accommodation with flights packages.",
+                      website: "http://www.dimensionsfestival.com/")
+f6.main_image = Rails.root.join("app/assets/images/dimensions4.jpg").open
+f6.second_image = Rails.root.join("app/assets/images/dimensions2.jpg").open
+f6.third_image = Rails.root.join("app/assets/images/boat-dimensions.jpg").open
+f6.save!
+
 
 
