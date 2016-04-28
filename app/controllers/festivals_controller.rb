@@ -34,10 +34,9 @@ class FestivalsController < ApplicationController
   end
 
   def update
-    raise
     @festival = Festival.find(params[:id])
-    if @festival.update(festival_params)
-      format.html { redirect_to @festival, notice: 'Your festival was successfully created.' }
+    if @festival.update_attributes(festival_params)
+      format.html { redirect_to festival_path(@festival), notice: 'Your festival was successfully created.' }
       format.json { render :show, status: :created, location: @festival }
     else
       format.html { render :new }

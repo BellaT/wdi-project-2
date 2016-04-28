@@ -170,5 +170,21 @@ f10.second_image = Rails.root.join("app/assets/images/bpm2.jpg").open
 f10.third_image = Rails.root.join("app/assets/images/bpm3.jpg").open
 f10.save!
 
+f11 = Festival.create!(title: "SXSW",
+                      location: "USA",
+                      city: "Austin",
+                      festival_date: DateTime.new(2016, 3, 15),
+                      month: "March",
+                      genre: "Contempory",
+                      tickets: "http://www.sxsw.com/attend/registration-information",
+                      description: "It's not that South By South West takes over Austin...downtown Austin becomes SXSW for nine days in March. Music, art, interactive, panels, comedy, and movies all vie for your attention span. Let's put it this way, you could skip media for a year, come to Austin for the week, and still come out ahead on pop culture. SXSW is one of the largest and most influential global music events of the year, taking place every March in Austin, Texas, the Live Music Capital of the World. At SXSW 2015, more than 30,000 music industry professionals and musicians took in six nights of performances in over 100 downtown venues, with a lineup featuring 2,200 acts from 62 foreign countries. In 2016, they plan to continue the tradition of bringing attendees a comprehensive mix of brand new, up-and-coming, international and legendary performers planted all over Austin in bars, clubs, parks, churches and elsewhere.",
+                      transport: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      accommodation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+                      website: "http://www.sxsw.com/music")
+f11.main_image = Rails.root.join("app/assets/images/SXSW1.jpg").open
+f11.second_image = Rails.root.join("app/assets/images/SXSW2.jpg").open
+f11.third_image = Rails.root.join("app/assets/images/SXSW3.jpg").open
+f11.save!
+
 
 
