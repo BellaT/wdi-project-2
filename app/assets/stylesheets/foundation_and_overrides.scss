@@ -464,11 +464,11 @@ $subheader-font-color: scale-color($header-font-color, $lightness: 45%);
 // $button-function-factor: -20%;
 
 // We use these to control button border styles.
-// $button-border-width: 0;
+$button-border-width: 1px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: #333333; //$primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
-// $button-border-color: $button-bg-hover;
+// $button-border-color: white; //$button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
 // $secondary-button-border-color: $secondary-button-bg-hover;
 // $success-button-bg-hover: scale-color($success-color, $lightness: $button-function-factor);
@@ -1259,7 +1259,7 @@ $input-font-family: 'Noto Sans', sans-serif; //inherit;
 // We use these to control the active item styles
 
 // $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
+$sub-nav-active-bg: #323232; //$primary-color;
 // $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
 // $sub-nav-active-color: $white;
 // $sub-nav-active-padding: $sub-nav-padding;
