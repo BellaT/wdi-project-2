@@ -8,7 +8,9 @@ A festival finding app
 Pitch is a festival finding app that allows the user to search through the database by either festival name, month, country and genre. 
 
 ###The ideas behind Pitch
-I absolutely love going to festivals so I was really excited to produce an app that I would like to use to search for new festivals.  I had a clear vision in my head of what I wanted the site to look like and using Foundation and other design tools I have been able to accomplish this. 
+I absolutely love going to festivals so I was really excited to produce an app that I would like to use to search for new festivals.  I had a clear vision in my head of what I wanted the site to look like and using Foundation and other design tools I have been able to accomplish this.
+
+###Balsamiq wireframes
 
 ###The Project requirements
 * A working full stack application using ruby on rails
