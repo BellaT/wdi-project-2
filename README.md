@@ -1,2 +1,3 @@
-# wdi-project-2
-My second project
+# Pitch
+
+![Screenshot 1](http://i.imgur.com/bTG4goX.png?1)
