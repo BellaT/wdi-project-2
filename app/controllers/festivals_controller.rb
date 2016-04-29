@@ -36,8 +36,10 @@ class FestivalsController < ApplicationController
   def update
     @festival = Festival.find(params[:id])
     if @festival.update_attributes(festival_params)
-      format.html { redirect_to festival_path(@festival), notice: 'Your festival was successfully created.' }
-      format.json { render :show, status: :created, location: @festival }
+      redirect_to festival_path(@festival)
+      flash[:success] = 'Your festival was successfully created.'
+      # format.html { redirect_to festival_path(@festival), notice: 'Your festival was successfully created.' }
+      # format.json { render :show, status: :created, location: @festival }
     else
       format.html { render :new }
       format.json { render json: @festival.errors, status: :unprocessable_entity }
@@ -81,7 +83,7 @@ class FestivalsController < ApplicationController
 
   private
     def festival_params
-      params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :image, :description,  :transport, :accommodation, :website)
+      params.require(:festival).permit(:title, :location, :festival_date, :genre, :tickets, :comments, :description,  :transport, :accommodation, :website, :city, :month, :main_image, :second_image, :third_image)
     end
 
     def get_genres_and_locations
