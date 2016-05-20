@@ -39,7 +39,7 @@ f2 = Festival.create!(title: "Glastonbury Festival",
                       website: "http://www.glastonburyfestivals.co.uk/")
 f2.main_image = Rails.root.join("app/assets/images/glastonbury-main.jpg").open
 f2.second_image = Rails.root.join("app/assets/images/glastonbury-second.jpg").open
-f2.third_image = Rails.root.join("app/assets/images/glastonbury-third.jpg").open
+f2.third_image = Rails.root.join("app/assets/images/Glastonbury-third.jpg").open
 f2.save!
 
 f3 = Festival.create!(title: "Dekmantel Festival",
