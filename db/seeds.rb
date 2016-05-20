@@ -133,9 +133,9 @@ f8 = Festival.create!(title: "Brooklyn Hip Hop Festival",
                       transport: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
                       accommodation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum, velit sed cursus rutrum, erat purus porta metus, quis vulputate mauris nibh eget odio. Pellentesque fermentum ex quis velit malesuada, ut aliquam orci vestibulum. Praesent purus tortor, consectetur at scelerisque vel, dictum eu lectus. Nullam vehicula libero in turpis ultrices sollicitudin. Vivamus fermentum sagittis nibh quis ultricies. Curabitur id neque vel ex ullamcorper tempor. Nullam justo diam, scelerisque et neque in, bibendum interdum odio. Praesent a diam ac leo pellentesque dictum. Nam ut metus pharetra, lacinia metus sed, condimentum leo. In hac habitasse platea dictumst. Morbi accumsan vitae nibh et facilisis. In ac porttitor purus, id lacinia tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
                       website: "http://www.bkhiphopfestival.com/about-2/")
-f8.main_image = Rails.root.join("app/assets/images/brooklyn1.jpg").open
+f8.main_image = Rails.root.join("app/assets/images/Brooklyn1.jpg").open
 f8.second_image = Rails.root.join("app/assets/images/brooklyn3.jpg").open
-f8.third_image = Rails.root.join("app/assets/images/brooklyn2.jpg").open
+f8.third_image = Rails.root.join("app/assets/images/Brooklyn2.jpg").open
 f8.save!
 
 f9 = Festival.create!(title: "Nice Jazz Festival",
