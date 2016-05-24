@@ -21,3 +21,7 @@ I absolutely love going to festivals so I was really excited to produce an app t
 * Include wireframes from the design process
 
 ###Technologies
+* Ruby on Rails
+
+###Website
+https://thepitchapp.herokuapp.com/
